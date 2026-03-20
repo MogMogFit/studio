@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>プライバシーポリシー</title>
+    <style>
+        body { font-family: sans-serif; line-height: 1.6; padding: 20px; max-width: 800px; margin: auto; }
+        h1 { border-bottom: 2px solid #ccc; }
+    </style>
+</head>
+<body>
+    <h1>プライバシーポリシー</h1>
+    
+    <p>ここに、用意した文章を貼り付けます。</p>
+    <p>改行したいときは、文章をこの &lt;p&gt; と &lt;/p&gt; で囲むときれいに見えますよ！</p>
+
+</body>
+</html>
