@@ -3,56 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MogMogFit 事業案内・法的文書</title>
+    <title>MogMogFit | モバイルアプリケーション開発事業</title>
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; line-height: 1.6; color: #333; padding: 40px 20px; max-width: 800px; margin: auto; }
-        header { text-align: center; margin-bottom: 40px; }
-        h1 { font-size: 1.8rem; color: #2c3e50; }
-        h2 { font-size: 1.3rem; border-left: 4px solid #3498db; padding-left: 10px; margin-top: 30px; }
-        .section { margin-bottom: 40px; text-align: left; }
-        .link-button { display: block; padding: 15px; margin: 10px 0; background: #f8f9fa; text-decoration: none; color: #3498db; border: 1px solid #dee2e6; border-radius: 8px; text-align: center; font-weight: bold; }
-        .link-button:hover { background: #e9ecef; border-color: #ced4da; }
-        .service-card { background: #fff; border: 1px solid #eee; padding: 20px; border-radius: 10px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
-        footer { margin-top: 60px; text-align: center; font-size: 0.9rem; color: #7f8c8d; }
-        hr { border: 0; border-top: 1px solid #eee; margin: 40px 0; }
+        :root { --primary: #3498db; --dark: #2c3e50; --bg: #f4f7f6; }
+        body { font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif; line-height: 1.8; color: #333; margin: 0; background: var(--bg); }
+        .container { max-width: 900px; margin: 40px auto; background: #fff; padding: 60px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border-radius: 8px; }
+        header { border-bottom: 2px solid var(--primary); padding-bottom: 20px; margin-bottom: 40px; }
+        h1 { font-size: 2rem; color: var(--dark); margin: 0; }
+        h2 { font-size: 1.4rem; color: var(--primary); border-left: 5px solid var(--primary); padding-left: 15px; margin-top: 40px; }
+        .service-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px; }
+        .card { border: 1px solid #eee; padding: 20px; border-radius: 8px; background: #fafafa; }
+        .card h3 { margin-top: 0; font-size: 1.1rem; color: var(--dark); }
+        .screenshot-area { background: #eee; height: 200px; display: flex; align-items: center; justify-content: center; border-radius: 8px; margin: 10px 0; color: #999; border: 1px dashed #ccc; }
+        .link-group { margin-top: 30px; }
+        .link-button { display: inline-block; padding: 10px 20px; background: var(--primary); color: #fff; text-decoration: none; border-radius: 5px; margin-right: 10px; font-size: 0.9rem; }
+        footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid #eee; font-size: 0.85rem; color: #666; }
+        .info-table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        .info-table th, .info-table td { border: 1px solid #eee; padding: 12px; text-align: left; }
+        .info-table th { background: #f9f9f9; width: 30%; }
     </style>
 </head>
 <body>
 
-<header>
-    <h1>Business Information</h1>
-    <p>モバイルアプリケーションの開発・保守運用事業</p>
-</header>
+<div class="container">
+    <header>
+        <h1>MogMogFit Business Portal</h1>
+        <p>次世代AIヘルスケアソリューションの開発と提供</p>
+    </header>
 
-<div class="section">
-    <h2>事業内容</h2>
-    <div class="service-card">
-        <p><strong>1. 自社プロダクトの開発・運営</strong><br>
-        最新のAI（Gemini API）を活用したヘルスケア・栄養管理アプリケーション「MogMogFit」の企画・開発を行っております。</p>
-        <p><strong>2. アプリケーション保守・運用コンサルティング</strong><br>
-        Android StudioおよびFirebaseを活用したモバイルアプリケーションの保守、技術支援、および運用管理業務を展開しております。</p>
-    </div>
+    <section>
+        <h2>事業概要</h2>
+        <p>MogMogFitは、最新の生成AI技術を活用したパーソナルヘルスケアアプリケーションの企画・開発、およびモバイルインフラの保守運用を主事業としています。利用者のQOL（生活の質）向上をテクノロジーで支援することを目指しています。</p>
+        
+        <div class="service-grid">
+            <div class="card">
+                <h3>自社プロダクト事業</h3>
+                <p>AI栄養解析アプリ「MogMogFit」の開発。Gemini APIを活用した対話型アドバイスエンジンの構築。</p>
+            </div>
+            <div class="card">
+                <h3>受託開発・コンサルティング</h3>
+                <p>FirebaseおよびAndroid環境を中心とした、アプリケーションの保守・技術支援業務。</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>主要開発プロダクト：MogMogFit</h2>
+        <p>2026年のローンチに向け、現在α版のクローズドテストを実施中です。</p>
+        <div class="service-grid">
+            <div>
+                <p><strong>【システムの特徴】</strong></p>
+                <ul>
+                    <li>Health Connect連携による活動量同期</li>
+                    <li>マルチモーダルAIによる画像食事解析</li>
+                    <li>Firebaseによるセキュアなデータ管理</li>
+                </ul>
+            </div>
+            <div>
+                <!-- ここに実際のアプリやAndroid Studioのキャプチャ画像を貼る -->
+                <div class="screenshot-area">
+                    [ ここにアプリの画面キャプチャを挿入 ]
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>開発ステータス</h2>
+        <table class="info-table">
+            <tr><th>2025年 Q3</th><td>事業開始・プロトタイプ開発</td></tr>
+            <tr><th>2025年 Q4</th><td>クローズドβテスト・UI/UX調整</td></tr>
+            <tr><th>2026年 Q1</th><td>Google Play Store 審査・公開予定</td></tr>
+        </table>
+    </section>
+
+    <section>
+        <h2>法的情報・各種ポリシー</h2>
+        <div class="link-group">
+            <a class="link-button" href="terms-of-service.html">利用規約</a>
+            <a class="link-button" href="privacy-policy.html">プライバシーポリシー</a>
+            <a class="link-button" href="#contact">特定商取引法に基づく表記（準備中）</a>
+        </div>
+    </section>
+
+    <footer>
+        <table class="info-table">
+            <tr><th>屋号</th><td>MogMogFit</td></tr>
+            <tr><th>代表者</th><td>芝原 幸（Yuki Shibahara）</td></tr>
+            <tr><th>事業所在地</th><td>〒321-4364 栃木県鹿沼市幸町1-3-27</td></tr>
+            <tr><th>事業形態</th><td>個人事業主</td></tr>
+            <tr><th>主要取引銀行</th><td>（口座開設審査中）</td></tr>
+        </table>
+        <p style="text-align:center; margin-top:40px;">&copy; 2026 MogMogFit. All Rights Reserved.</p>
+    </footer>
 </div>
-
-<div class="section">
-    <h2>主要プロダクト：MogMogFit</h2>
-    <p>対話型AIによる食事アドバイスと、栄養成分解析を組み合わせた次世代のヘルスケアアプリです。現在、2026年内の正式リリースに向けて開発およびクローズドテストを進行しております。</p>
-</div>
-
-<div class="section">
-    <h2>法的文書・各種規約</h2>
-    <a class="link-button" href="privacy-policy.html">MogMogFitアプリ　プライバシーポリシー</a>
-    <a class="link-button" href="terms-of-service.html">MogMogFitアプリ　利用規約</a>
-</div>
-
-<hr>
-
-<footer>
-    <p>事業所：栃木県鹿沼市幸町1-3-27<br>
-    屋号：MogMogFit<br>
-    代表：Yuki Shibahara</p>
-    <p>&copy; 2026 MogMogFit All Rights Reserved.</p>
-</footer>
 
 </body>
 </html>
