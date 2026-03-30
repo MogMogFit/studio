@@ -21,6 +21,27 @@
         .info-table { width: 100%; border-collapse: collapse; margin-top: 20px; }
         .info-table th, .info-table td { border: 1px solid #eee; padding: 12px; text-align: left; }
         .info-table th { background: #f9f9f9; width: 30%; }
+        .screenshot-gallery {
+    display: flex;
+    gap: 15px;
+    justify-content: flex-start;
+}
+.screenshot-item {
+    text-align: center;
+    width: 180px; /* スマホ画面の比率に合わせる */
+}
+.screenshot-item img {
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.screenshot-item span {
+    display: block;
+    font-size: 0.8rem;
+    color: #666;
+    margin-top: 8px;
+}
     </style>
 </head>
 <body>
