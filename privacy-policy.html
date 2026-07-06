@@ -2,97 +2,253 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <title>プライバシーポリシー</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>プライバシーポリシー / Privacy Policy</title>
     <style>
-        body { font-family: sans-serif; line-height: 1.6; padding: 20px; max-width: 800px; margin: auto; }
-        h1 { border-bottom: 2px solid #ccc; }
+        body { 
+            font-family: sans-serif; 
+            line-height: 1.6; 
+            padding: 20px; 
+            max-width: 800px; 
+            margin: auto; 
+            color: #333;
+        }
+        h1 { 
+            border-bottom: 2px solid #ccc; 
+            padding-bottom: 10px;
+        }
+        /* ボタンのスタイリング */
+        .tab-container {
+            margin-bottom: 20px;
+            display: flex;
+            gap: 10px;
+        }
+        .tab-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: 1px solid #007bff;
+            background-color: #fff;
+            color: #007bff;
+            border-radius: 5px;
+            transition: all 0.3s;
+        }
+        /* 選択されているボタンのスタイル */
+        .tab-button.active {
+            background-color: #007bff;
+            color: #fff;
+        }
+        /* 初期状態では英語を非表示にする */
+        #en-content {
+            display: none;
+        }
+        p { margin-bottom: 10px; }
+        .indent { padding-left: 1.5em; }
     </style>
 </head>
 <body>
-    <h1>プライバシーポリシー</h1>
-    
-<p>MogMogFit（以下，「当社」といいます。）は，本アプリケーション上で提供するサービス（以下,「本サービス」といいます。）における，ユーザーの個人情報の取扱いについて，以下のとおりプライバシーポリシー（以下，「本ポリシー」といいます。）を定めます。</p>
 
-<p>第1条（個人情報）</p>
-<p>　「個人情報」とは，個人情報保護法にいう「個人情報」を指すものとし，生存する個人に関する情報であって，当該情報に含まれるGoogleユーザーID、ヘルスケアデータ（歩数、カロリー等）、対話データ（チャット履歴や送信された写真）、その他の記述等により特定の個人を識別できる情報及び容貌，指紋，声紋にかかるデータなどの当該情報単体から特定の個人を識別できる情報（個人識別情報）を指します。</p>
+    <div class="tab-container">
+        <button id="btn-ja" class="tab-button active" onclick="switchLanguage('ja')">日本語</button>
+        <button id="btn-en" class="tab-button" onclick="switchLanguage('en')">English</button>
+    </div>
 
-<p>第2条（個人情報の収集方法）</p>
-<p>　当社は，ユーザーが利用する際にユーザーID（メールアドレス等）、Googleヘルスコネクトのデータ（歩数、心拍数、カロリー等）、チャット履歴や食事画像の個人情報をお尋ねすることがありす。また，ユーザーと提携先などとの間でなされたユーザーの個人情報を含む取引記録や決済に関する情報を,当社の提携先（情報提供元，広告主，広告配信先などを含みます。以下，｢提携先｣といいます。）などから収集することがあります。</p>
+    <div id="ja-content">
+        <h1>プライバシーポリシー</h1>
+        <p>MogMogFit（以下、「当社」といいます。）は、本アプリケーション上で提供するサービス（以下、「本サービス」といいます。）における、ユーザーの個人情報の取扱いについて、以下のとおりプライバシーポリシー（以下、「本ポリシー」といいます。）を定めます。</p>
 
-<p>第3条（個人情報を収集・利用する目的）</p>
-<p>　当社が個人情報を収集・利用する目的は，以下のとおりです。</p>
-<p></p>
-<p>　１．当社サービスの提供・運営のため</p>
-<p>　２．ユーザーからのお問い合わせに回答するため（本人確認を行うことを含む）</p>
-<p>　３．ユーザーが利用中のサービスの新機能，更新情報，キャンペーン等及び当社が提供する他のサービスの案内のメールを送付するため</p>
-<p>　４．メンテナンス，重要なお知らせなど必要に応じたご連絡のため</p>
-<p>　５．利用規約に違反したユーザーや，不正・不当な目的でサービスを利用しようとするユーザーの特定をし，ご利用をお断りするため</p>
-<p>　６．ユーザーにご自身の登録情報の閲覧や変更，削除，ご利用状況の閲覧を行っていただくため</p>
-<p>　７．有料サービスにおいて，ユーザーに利用料金を請求するため</p>
-<p>　８．AIキャラクターによる健康アドバイスの生成及び表示のため</p>
-<p>　９．ユーザーごとのプロフィール管理のため</p>
-<p>１０．上記の利用目的に付随する目的</p>
-<p>
-<p>第4条（情報の外部送信）</p>
-<p>　本サービスは、AIによるアドバイス生成のため、ユーザーが入力した対話データおよび画像データを、Google LLCが提供するGemini APIに送信します。送信されたデータはアドバイス生成の目的のみに使用され、本ポリシーに従って取り扱われます。</p>
-<p></p>
-<p>第5条（ヘルスコネクトデータの取り扱い）</p>
-<p>本サービスがGoogleヘルスコネクトから取得した情報の使用は、ヘルスコネクトの許可される使用に関するポリシー（限定的利用要件を含む）に従います。取得したデータは、AIキャラクターによるアドバイス生成およびユーザーへの表示のみに使用し、広告配信や第三者への販売には一切利用しません。</p>
-<p></p>
-<p>第6条（利用目的の変更）</p>
-<p>１．当社は，利用目的が変更前と関連性を有すると合理的に認められる場合に限り，個人情報の利用目的を変更するものとします。</p>
-<p>２．利用目的の変更を行った場合には，変更後の目的について，当社所定の方法により，ユーザーに通知し，または本ウェブサイト上に公表するものとします。</p>
-<p></p>
-<p>第7条（個人情報の第三者提供）</p>
-<p>１．当社は，次に掲げる場合を除いて，あらかじめユーザーの同意を得ることなく，第三者に個人情報を提供することはありません。ただし，個人情報保護法その他の法令で認められる場合を除きます。（Google LLC等のクラウドサービスへのデータ保存・解析委託を除く）</p>
-<p>　１．AIアドバイス生成のため、テキストや画像をGoogleのサーバーへ送信するとき</p>
-<p>　２．AIアドバイス生成のため、健康データ読み取りするとき</p>
-<p>　３．人の生命，身体または財産の保護のために必要がある場合であって，本人の同意を得ることが困難であるとき</p>
-<p>　４．公衆衛生の向上または児童の健全な育成の推進のために特に必要がある場合であって，本人の同意を得ることが困難であるとき</p>
-<p>　５．国の機関もしくは地方公共団体またはその委託を受けた者が法令の定める事務を遂行することに対して協力する必要がある場合であって，本人の同意を得ることにより当該事務の遂行に支障を及ぼすおそれがあるとき</p>
-<p>　４．予め次の事項を告知あるいは公表し，かつ当社が個人情報保護委員会に届出をしたとき</p>
-<p>　　１．利用目的に第三者への提供を含むこと</p>
-<p>　　２．第三者に提供されるデータの項目</p>
-<p>　　３．第三者への提供の手段または方法</p>
-<p>　　４．本人の求めに応じて個人情報の第三者への提供を停止すること</p>
-<p>　　５．本人の求めを受け付ける方法</p>
-<p>２．前項の定めにかかわらず，次に掲げる場合には，当該情報の提供先は第三者に該当しないものとします。</p>
-<p>　１．当社が利用目的の達成に必要な範囲内において個人情報の取扱いの全部または一部を委託する場合</p>
-<p>　２．合併その他の事由による事業の承継に伴って個人情報が提供される場合</p>
-<p>　３．個人情報を特定の者との間で共同して利用する場合であって，その旨並びに共同して利用される個人情報の項目，共同して利用する者の範囲，利用する者の利用目的および当該個人情報の管理について責任を有する者の氏名または名称について，あらかじめ本人に通知し，または本人が容易に知り得る状態に置いた場合</p>
-<p></p>
-<p>第8条（個人情報の開示）</p>
-<p>１．当社は，本人から個人情報の開示を求められたときは，本人に対し，遅滞なくこれを開示します。ただし，開示することにより次のいずれかに該当する場合は，その全部または一部を開示しないこともあり，開示しない決定をした場合には，その旨を遅滞なく通知します。なお，個人情報の開示に際しては，1件あたり1，000円の手数料を申し受けます。</p>
-<p>　１．本人または第三者の生命，身体，財産その他の権利利益を害するおそれがある場合</p>
-<p>　２．当社の業務の適正な実施に著しい支障を及ぼすおそれがある場合</p>
-<p>　３．その他法令に違反することとなる場合</p>
-<p>２．前項の定めにかかわらず，履歴情報および特性情報などの個人情報以外の情報については，原則として開示いたしません。</p>
-<p></p>
-<p>第9条（個人情報の訂正および削除）</p>
-<p>１．ユーザーは，当社の保有する自己の個人情報が誤った情報である場合には，当社が定める手続きにより，当社に対して個人情報の訂正，追加または削除（以下，「訂正等」といいます。）を請求することができます。</p>
-<p>２．当社は，ユーザーから前項の請求を受けてその請求に応じる必要があると判断した場合には，遅滞なく，当該個人情報の訂正等を行うものとします。</p>
-<p>３．当社は，前項の規定に基づき訂正等を行った場合，または訂正等を行わない旨の決定をしたときは遅滞なく，これをユーザーに通知します。</p>
-<p></p>
-<p>第10条（個人情報の利用停止等）</p>
-<p>１．当社は，本人から，個人情報が，利用目的の範囲を超えて取り扱われているという理由，または不正の手段により取得されたものであるという理由により，その利用の停止または消去（以下，「利用停止等」といいます。）を求められた場合には，遅滞なく必要な調査を行います。</p>
-<p>２．前項の調査結果に基づき，その請求に応じる必要があると判断した場合には，遅滞なく，当該個人情報の利用停止等を行います。</p>
-<p>３．当社は，前項の規定に基づき利用停止等を行った場合，または利用停止等を行わない旨の決定をしたときは，遅滞なく，これをユーザーに通知します。</p>
-<p>４．前2項にかかわらず，利用停止等に多額の費用を有する場合その他利用停止等を行うことが困難な場合であって，ユーザーの権利利益を保護するために必要なこれに代わるべき措置をとれる場合は，この代替策を講じるものとします。</p>
-<p></p>
-<p>第11条（プライバシーポリシーの変更）</p>
-<p>１．本ポリシーの内容は，法令その他本ポリシーに別段の定めのある事項を除いて，ユーザーに通知することなく，変更することができるものとします。</p>
-<p>２．当社が別途定める場合を除いて，変更後のプライバシーポリシーは，本ウェブサイトに掲載したときから効力を生じるものとします。</p>
-<p></p>
-<p>第12条（お問い合わせ窓口）</p>
-<p></p>
-<p>本ポリシーに関するお問い合わせは，下記の窓口までお願いいたします。</p>
-<p></p>
-<p>住所：●●●●●</p>
-<p>社名：MogMogfit</p>
-<p>代表：柴原 由喜</p>
-<p>Eメールアドレス：mogmogfit.studio@gmail.com</p>
+        <p><strong>第1条（個人情報）</strong></p>
+        <p>「個人情報」とは、個人情報保護法にいう「個人情報」を指すものとし、生存する個人に関する情報であって、当該情報に含まれるGoogleユーザーID、ヘルスケアデータ（歩数、カロリー等）、対話データ（チャット履歴や送信された写真）、その他の記述等により特定の個人を識別できる情報及び容貌、指紋、声紋にかかるデータなどの当該情報単体から特定の個人を識別できる情報（個人識別情報）を指します。</p>
 
+        <p><strong>第2条（個人情報の収集方法）</strong></p>
+        <p>当社は、ユーザーが利用する際にユーザーID（メールアドレス等）、Googleヘルスコネクトのデータ（歩数、心拍数、カロリー等）、チャット履歴や食事画像の個人情報をお尋ねすることがあります。また、ユーザーと提携先などとの間でなされたユーザーの個人情報を含む取引記録や決済に関する情報を、当社の提携先（情報提供元、広告主、広告配信先などを含みます。以下、「提携先」といいます。）などから収集することがあります。</p>
 
+        <p><strong>第3条（個人情報を収集・利用する目的）</strong></p>
+        <p>当社が個人情報を収集・利用する目的は、以下のとおりです。</p>
+        <div class="indent">
+            <p>１．当社サービスの提供・運営のため</p>
+            <p>２．ユーザーからのお問い合わせに回答するため（本人確認を行うことを含む）</p>
+            <p>３．ユーザーが利用中のサービスの新機能、更新情報、キャンペーン等及び当社が提供する他のサービスの案内のメールを送付するため</p>
+            <p>４．メンテナンス、重要なお知らせなど必要に応じたご連絡のため</p>
+            <p>５．利用規約に違反したユーザーや、不正・不当な目的でサービスを利用しようとするユーザーの特定をし、ご利用をお断りするため</p>
+            <p>６．ユーザーにご自身の登録情報の閲覧や変更、削除、ご利用状況の閲覧を行っていただくため</p>
+            <p>７．有料サービスにおいて、ユーザーに利用料金を請求するため</p>
+            <p>８．AIキャラクターによる健康アドバイスの生成及び表示のため</p>
+            <p>９．ユーザーごとのプロフィール管理のため</p>
+            <p>１０．上記の利用目的に付随する目的</p>
+        </div>
+
+        <p><strong>第4条（情報の外部送信）</strong></p>
+        <p>本サービスは、AIによるアドバイス生成のため、ユーザーが入力した対話データおよび画像データを、Google LLCが提供するGemini APIに送信します。送信されたデータはアドバイス生成の目的のみに使用され、本ポリシーに従って取り扱われます。</p>
+
+        <p><strong>第5条（ヘルスコネクトデータの取り扱い）</strong></p>
+        <p>本サービスがGoogleヘルスコネクトから取得した情報の使用は、ヘルスコネクトの許可される使用に関するポリシー（限定的利用要件を含む）に従います。取得したデータは、AIキャラクターによるアドバイス生成およびユーザーへの表示のみに使用し、広告配信や第三者への販売には一切利用しません。</p>
+
+        <p><strong>第6条（利用目的の変更）</strong></p>
+        <p>１．当社は、利用目的が変更前と関連性を有すると合理的に認められる場合に限り、個人情報の利用目的を変更するものとします。</p>
+        <p>２．利用目的の変更を行った場合には、変更後の目的について、当社所定の方法により、ユーザーに通知し、または本ウェブサイト上に公表するものとします。</p>
+
+        <p><strong>第7条（個人情報の第三者提供）</strong></p>
+        <p>１．当社は、次に掲げる場合を除いて、あらかじめユーザーの同意を得ることなく、第三者に個人情報を提供することはありません。ただし、個人情報保護法その他の法令で認められる場合を除きます（第4条に基づくGemini APIへの送信、およびクラウドサービスへのデータ保存・解析委託を除く）。</p>
+        <div class="indent">
+            <p>１．人の生命、身体または財産の保護のために必要がある場合であって、本人の同意を得ることが困難であるとき</p>
+            <p>２．公衆衛生の向上または児童の健全な育成の推進のために特に必要がある場合であって、本人の同意を得ることが困難であるとき</p>
+            <p>３．国の機関もしくは地方公共団体またはその委託を受けた者が法令の定める事務を遂行することに対して協力する必要がある場合であって、本人の同意を得ることにより当該事務の遂行に支障を及ぼすおそれがあるとき</p>
+            <p>４．予め次の事項を告知あるいは公表し、かつ当社が個人情報保護委員会に届出をしたとき</p>
+            <div class="indent">
+                <p>１．利用目的に第三者への提供を含むこと</p>
+                <p>２．第三者に提供されるデータの項目</p>
+                <p>３．第三者への提供の手段または方法</p>
+                <p>４．本人の求めに応じて個人情報の第三者への提供を停止すること</p>
+                <p>５．本人の求めを受け付ける方法</p>
+            </div>
+        </div>
+        <p>２．前項の定めにかかわらず、次に掲げる場合には、当該情報の提供先は第三者に該当しないものとします。</p>
+        <div class="indent">
+            <p>１．当社が利用目的の達成に必要な範囲内において個人情報の取扱いの全部または一部を委託する場合</p>
+            <p>２．合併その他の事由による事業の承継に伴って個人情報が提供される場合</p>
+            <p>３．個人情報を特定の者との間で共同して利用する場合であって、その旨並びに共同して利用される個人情報の項目、共同して利用する者の範囲、利用する者の利用目的および当該個人情報の管理について責任を有する者の氏名または名称について、あらかじめ本人に通知し、または本人が容易に知り得る状態に置いた場合</p>
+        </div>
+
+        <p><strong>第8条（個人情報の開示）</strong></p>
+        <p>１．当社は、本人から個人情報の開示を求められたときは、本人に対し、遅滞なくこれを開示します。ただし、開示することにより次のいずれかに該当する場合は、その全部または一部を開示しないこともあり、開示しない決定をした場合には、その旨を遅滞なく通知します。なお、個人情報の開示に際しては、1件あたり1,000円の手数料を申し受けます。</p>
+        <div class="indent">
+            <p>１．本人または第三者の生命、身体、財産その他の権利利益を害するおそれがある場合</p>
+            <p>２．当社の業務の適正な実施に著しい支障を及ぼすおそれがある場合</p>
+            <p>３．その他法令に違反することとなる場合</p>
+        </div>
+        <p>２．前項の定めにかかわらず、履歴情報および特性情報などの個人情報以外の情報については、原則として開示いたしません。</p>
+
+        <p><strong>第9条（個人情報の訂正および削除）</strong></p>
+        <p>１．ユーザーは、当社の保有する自己の個人情報が誤った情報である場合には、当社が定める手続きにより、当社に対して個人情報の訂正、追加または削除（以下、「訂正等」といいます。）を請求することができます。</p>
+        <p>２．当社は、ユーザーから前項の請求を受けてその請求に応じる必要があると判断した場合には、遅滞なく、当該個人情報の訂正等を行うものとします。</p>
+        <p>３．当社は、前項の規定に基づき訂正等を行った場合、または訂正等を行わない旨の決定をしたときは遅滞なく、これをユーザーに通知します。</p>
+
+        <p><strong>第10条（個人情報の利用停止等）</strong></p>
+        <p>１．当社は、本人から、個人情報が、利用目的の範囲を超えて取り扱われているという理由、または不正の手段により取得されたものであるという理由により、その利用の停止または消去（以下、「利用停止等」といいます。）を求められた場合には、遅滞なく必要な調査を行います。</p>
+        <p>２．前項の調査結果に基づき、その請求に応じる必要があると判断した場合には、遅滞なく、当該個人情報の利用停止等を行います。</p>
+        <p>３．当社は、前項の規定に基づき利用停止等を行った場合、または利用停止等を行わない旨の決定をしたときは、遅滞なく、これをユーザーに通知します。</p>
+        <p>４．前2項にかかわらず、利用停止等に多額の費用を有する場合その他利用停止等を行うことが困難な場合であって、ユーザーの権利利益を保護するために必要なこれに代わるべき措置をとれる場合は、この代替策を講じるものとします。</p>
+
+        <p><strong>第11条（プライバシーポリシーの変更）</strong></p>
+        <p>１．本ポリシーの内容は、法令その他本ポリシーに別段の定めのある事項を除いて、ユーザーに通知することなく、変更することができるものとします。</p>
+        <p>２．当社が別途定める場合を除いて，変更後のプライバシーポリシーは、本ウェブサイトに掲載したときから効力を生じるものとします。</p>
+
+        <p><strong>第12条（お問い合わせ窓口）</strong></p>
+        <p>本ポリシーに関するお問い合わせは、下記の窓口までお願いいたします。</p>
+        <p>住所：●●●●●<br>
+        社名：MogMogFit<br>
+        Eメールアドレス：mogmogfit.studio@gmail.com</p>
+    </div>
+
+    <div id="en-content">
+        <h1>Privacy Policy</h1>
+        <p>MogMogFit (hereinafter referred to as the "Company") sets forth this Privacy Policy (hereinafter referred to as the "Policy") regarding the handling of users' personal information in the services provided on this application (hereinafter referred to as the "Service").</p>
+
+        <p><strong>Article 1 (Personal Information)</strong></p>
+        <p>"Personal Information" shall refer to "personal information" as defined in the Personal Information Protection Act of Japan, and means information regarding a living individual that can identify a specific individual by Google User ID, healthcare data (steps, calories, etc.), interaction data (chat history and transmitted photos), or other descriptions contained in such information, as well as information that can identify a specific individual from such information alone, such as data concerning physical appearance, fingerprints, or voiceprints (personal identification information).</p>
+
+        <p><strong>Article 2 (How We Collect Personal Information)</strong></p>
+        <p>The Company may ask for personal information such as User ID (email address, etc.), Google Health Connect data (steps, heart rate, calories, etc.), chat history, and meal images when users use the Service. In addition, the Company may collect transaction records and information related to payments, including the user's personal information made between the user and partners, from the Company's partners (including information providers, advertisers, and ad distribution destinations; hereinafter referred to as "Partners").</p>
+
+        <p><strong>Article 3 (Purpose of Collecting and Using Personal Information)</strong></p>
+        <p>The purposes for which the Company collects and uses personal information are as follows:</p>
+        <div class="indent">
+            <p>1. For the provision and operation of the Service</p>
+            <p>2. To respond to inquiries from users (including identity verification)</p>
+            <p>3. To send emails regarding new features, updates, campaigns, etc., of the Service currently used by the user, and information on other services provided by the Company</p>
+            <p>4. For necessary communications such as maintenance and important notices</p>
+            <p>5. To identify users who violate the Terms of Service or who attempt to use the Service for improper or unauthorized purposes, and to refuse their use</p>
+            <p>6. To allow users to view, change, or delete their own registration information and view their usage status</p>
+            <p>7. To bill users for usage fees in paid services</p>
+            <p>8. To generate and display health advice by AI characters</p>
+            <p>9. For managing profiles for each user</p>
+            <p>10. Purposes incidental to the above purposes of use</p>
+        </div>
+
+        <p><strong>Article 4 (External Transmission of Information)</strong></p>
+        <p>In order to generate advice via AI, the Service transmits interaction data and image data entered by the user to the Gemini API provided by Google LLC. The transmitted data will be used solely for the purpose of generating advice and will be handled in accordance with this Policy.</p>
+
+        <p><strong>Article 5 (Handling of Health Connect Data)</strong></p>
+        <p>The Service's use of information received from Google Health Connect will adhere to the Health Connect Permissions policy, including the Limited Use requirements. The acquired data will be used solely for generating advice by AI characters and displaying it to users, and will never be used for advertising distribution or sold to third parties.</p>
+
+        <p><strong>Article 6 (Changes to the Purpose of Use)</strong></p>
+        <p>1. The Company shall change the purpose of use of personal information only when it is reasonably recognized that the purpose of use after the change is relevant to that before the change.</p>
+        <p>2. In the event of a change to the purpose of use, the changed purpose shall be notified to the user or announced on this website in a manner prescribed by the Company.</p>
+
+        <p><strong>Article 7 (Third-Party Provision of Personal Information)</strong></p>
+        <p>1. The Company will not provide personal information to a third party without obtaining the prior consent of the user, except in the following cases, or unless permitted by the Personal Information Protection Act or other laws and regulations (excluding data transmission to Gemini API based on Article 4 and data storage/analysis entrustment to cloud services such as Google LLC).</p>
+        <div class="indent">
+            <p>1. When it is necessary for the protection of a person's life, body, or property, and it is difficult to obtain the consent of the individual</p>
+            <p>2. When it is particularly necessary for the improvement of public health or the promotion of the sound development of children, and it is difficult to obtain the consent of the individual</p>
+            <p>3. When it is necessary to cooperate with a state organ, a local government, or a person entrusted by them in executing affairs prescribed by laws and regulations, and obtaining the consent of the individual may impede the execution of such affairs</p>
+            <p>4. When the following matters have been notified or announced in advance, and the Company has notified the Personal Information Protection Commission:</p>
+            <div class="indent">
+                <p>1. Including provision to third parties in the purpose of use</p>
+                <p>2. Items of data provided to third parties</p>
+                <p>3. Means or method of provision to third parties</p>
+                <p>4. Stopping the provision of personal information to third parties at the request of the individual</p>
+                <p>5. Method of accepting requests from the individual</p>
+            </div>
+        </div>
+        <p>2. Notwithstanding the provisions of the preceding paragraph, the recipient of the information shall not fall under a third party in the following cases:</p>
+        <div class="indent">
+            <p>1. When the Company entrusts all or part of the handling of personal information within the scope necessary to achieve the purpose of use</p>
+            <p>2. When personal information is provided due to business succession resulting from a merger or other reasons</p>
+            <p>3. When personal information is used jointly with a specific person, and the individual is notified in advance or placed in a state where they can easily know the effect, the items of personal information jointly used, the scope of joint users, the purpose of use of the users, and the name or title of the person responsible for the management of the personal information</p>
+        </div>
+
+        <p><strong>Article 8 (Disclosure of Personal Information)</strong></p>
+        <p>1. When the Company is requested by the individual to disclose personal information, the Company shall disclose it to the individual without delay. However, if disclosure falls under any of the following, all or part of it may not be disclosed, and if a decision is made not to disclose, that effect will be notified without delay. A fee of 1,000 yen per request will be charged for the disclosure of personal information.</p>
+        <div class="indent">
+            <p>1. When there is a risk of harming the life, body, property, or other rights and interests of the individual or a third party</p>
+            <p>2. When there is a risk of causing significant impediment to the proper execution of the Company's business</p>
+            <p>3. When it would violate other laws and regulations</p>
+        </div>
+        <p>2. Notwithstanding the provisions of the preceding paragraph, in principle, information other than personal information, such as history information and characteristic information, will not be disclosed.</p>
+
+        <p><strong>Article 9 (Correction and Deletion of Personal Information)</strong></p>
+        <p>1. If the personal information held by the Company is incorrect, the user may request the Company to correct, add, or delete the personal information (hereinafter referred to as "Correction, etc.") in accordance with the procedures established by the Company.</p>
+        <p>2. If the Company receives a request from the user mentioned in the preceding paragraph and determines that it is necessary to respond to the request, the Company shall perform Correction, etc. of the relevant personal information without delay.</p>
+        <p>3. If the Company performs Correction, etc. based on the provisions of the preceding paragraph, or makes a decision not to perform Correction, etc., it shall notify the user without delay.</p>
+
+        <p><strong>Article 10 (Suspension of Use, etc. of Personal Information)</strong></p>
+        <p>1. If the Company is requested by the individual to suspend the use or erase personal information (hereinafter referred to as "Suspension of Use, etc.") on the grounds that it is handled beyond the scope of the purpose of use or has been acquired by improper means, the Company shall conduct the necessary investigation without delay.</p>
+        <p>2. If it is determined that it is necessary to respond to the request based on the results of the investigation mentioned in the preceding paragraph, the Company shall perform Suspension of Use, etc. of the relevant personal information without delay.</p>
+        <p>3. If the Company performs Suspension of Use, etc. based on the provisions of the preceding paragraph, or makes a decision not to perform Suspension of Use, etc., it shall notify the user without delay.</p>
+        <p>4. Notwithstanding the preceding two paragraphs, if Suspension of Use, etc. requires a large amount of expense or is otherwise difficult to perform, and alternative measures necessary to protect the rights and interests of the user can be taken, these alternative measures shall be implemented.</p>
+
+        <p><strong>Article 11 (Changes to the Privacy Policy)</strong></p>
+        <p>1. The contents of this Policy may be changed without notice to the user, except as otherwise provided by laws and regulations or in this Policy.</p>
+        <p>2. Unless otherwise separately specified by the Company, the modified Privacy Policy shall become effective from the time it is posted on this website.</p>
+
+        <p><strong>Article 12 (Contact Information)</strong></p>
+        <p>For inquiries regarding this Policy, please contact the following office:</p>
+        <p>Address: ●●●●●<br>
+        Company Name: MogMogFit<br>
+        Email Address: mogmogfit.studio@gmail.com</p>
+    </div>
+
+    <script>
+        function switchLanguage(lang) {
+            const jaContent = document.getElementById('ja-content');
+            const enContent = document.getElementById('en-content');
+            const btnJa = document.getElementById('btn-ja');
+            const btnEn = document.getElementById('btn-en');
+
+            if (lang === 'ja') {
+                jaContent.style.display = 'block';
+                enContent.style.display = 'none';
+                btnJa.classList.add('active');
+                btnEn.classList.remove('active');
+            } else if (lang === 'en') {
+                jaContent.style.display = 'none';
+                enContent.style.display = 'block';
+                btnEn.classList.add('active');
+                btnJa.classList.remove('active');
+            }
+        }
+    </script>
 
 </body>
 </html>
