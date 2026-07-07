@@ -17,7 +17,6 @@
             border-bottom: 2px solid #ccc; 
             padding-bottom: 10px;
         }
-        /* ボタンのスタイリング */
         .tab-container {
             margin-bottom: 20px;
             display: flex;
@@ -33,17 +32,22 @@
             border-radius: 5px;
             transition: all 0.3s;
         }
-        /* 選択されているボタンのスタイル */
         .tab-button.active {
             background-color: #007bff;
             color: #fff;
         }
-        /* 初期状態では英語を非表示にする */
         #en-content {
             display: none;
         }
         p { margin-bottom: 10px; }
         .indent { padding-left: 1.5em; }
+        .note {
+            background-color: #fff8e1;
+            border-left: 4px solid #ffc107;
+            padding: 10px 15px;
+            margin: 15px 0;
+            font-size: 0.9em;
+        }
     </style>
 </head>
 <body>
@@ -64,6 +68,7 @@
         <p>２．当社は本サービスに関し、本規約のほか、ご利用にあたってのルール等、各種の定め（以下、「個別規定」といいます。）をすることがあります。これら個別規定はその名称のいかんに関わらず、本規約の一部を構成するものとします。</p>
         <p>３．本規約の規定が前条の個別規定の規定と矛盾する場合には、個別規定において特段の定めなき限り、個別規定の規定が優先されるものとします。</p>
         <p>４．【非医療用目的限定】本サービスはAIによる助言を提供するものであり、医師による診断や治療を代替するものではありません。健康上の不安がある場合は、必ず専門の医療機関を受診してください。</p>
+        <p>５．【利用可能年齢】本サービスは、満13歳未満の方はご利用いただけません。満13歳以上満18歳未満の方は、親権者その他の法定代理人の同意を得た上でご利用いただけるものとします。満13歳以上満18歳未満のユーザーが本サービスを利用した場合、当該ユーザーは、法定代理人の同意を得た上で利用しているものとみなします。<span class="note">【要確認】この年齢基準はApp Store/Google Playに登録するアプリの年齢区分（コンテンツレーティング）とも一致させてください。特にGoogle Playでは「デザインされた対象年齢」の申告内容と本規約の年齢基準に齟齬がないようご注意ください。</span></p>
 
         <p><strong>第2条（利用登録）</strong></p>
         <p>１．本サービスにおいては、登録希望者が本規約に同意の上、当社の定める方法によって利用登録を申請し、当社がこれを承認することによって、利用登録が完了するものとします。</p>
@@ -80,8 +85,9 @@
         <p>３．ユーザーID及びパスワードが第三者によって使用されたことによって生じた損害は、当社に故意又は重大な過失がある場合を除き、当社は一切の責任を負わないものとします。</p>
 
         <p><strong>第4条（利用料金および支払方法）</strong></p>
-        <p>１．ユーザーは、本サービスの有料部分の対価として、当社が別途定め、本ウェブサイトに表示する利用料金を、当社が指定する方法により支払うものとします。</p>
-        <p>２．ユーザーが利用料金の支払を遅滞した場合には、ユーザーは年14.6％の割合による遅延損害金を支払うものとします。</p>
+        <p>１．本サービスの有料部分は、Google LLCが提供するGoogle Playの課金システム（アプリ内購入）を通じてのみ提供されます。当社は、クレジットカード決済その他の独自の決済手段による課金は行いません。</p>
+        <p>２．利用料金の額、支払方法、請求のタイミング、自動更新、解約手続きおよび返金については、Google Playの規約および表示に従うものとし、ユーザーはあらかじめこれに同意した上で本サービスの有料部分を利用するものとします。</p>
+        <p>３．前2項の定めにより、本サービスは特定商取引法上の通信販売に該当する独自の決済手段を用いないため、同法に基づく表記は行っておりません。<span class="note">【要確認】将来的にWebサイト等での独自課金（クレジットカード決済等）を追加する場合は、その時点で特定商取引法に基づく表記ページの新設が必要になります。</span></p>
 
         <p><strong>第5条（禁止事項）</strong></p>
         <p>ユーザーは、本サービスの利用にあたり、以下の行為をしてはなりません。</p>
@@ -98,10 +104,9 @@
             <p>１０．本サービスの他のユーザーまたはその他の第三者に不利益、損害、不快感を与える行為</p>
             <p>１１．他のユーザーに成りすます行為</p>
             <p>１２．当社が許諾しない本サービス上での宣伝、広告、勧誘、または営業行為</p>
-            <p>１３．面識のない異性との出会いを目的とした行為</p>
-            <p>１４．当社のサービスに関連して、反社会的勢力に対して直接または間接に利益を供与する行為</p>
-            <p>１５．AIを悪用したり、システムに負荷をかける行為</p>
-            <p>１６．その他、当社が不適切と判断する行為</p>
+            <p>１３．当社のサービスに関連して、反社会的勢力に対して直接または間接に利益を供与する行為</p>
+            <p>１４．AIを悪用したり、システムに負荷をかける行為（AIに対する不適切な指示により、本来の応答範囲を逸脱させる行為を含みます。）</p>
+            <p>１５．その他、当社が不適切と判断する行為</p>
         </div>
 
         <p><strong>第6条（本サービスの提供の停止等）</strong></p>
@@ -114,7 +119,7 @@
         </div>
         <p>２．当社は、本サービスの提供の停止または中断により、ユーザーまたは第三者が被ったいかなる不利益または損害についても、一切の責任を負わないものとします。</p>
 
-        <p><strong>第7条（利用制限および登録抹消）</strong></p>
+        <p><strong>第7条（利用制限、登録抹消および退会）</strong></p>
         <p>１．当社は、ユーザーが以下のいずれかに該当する場合には、事前の通知なく、ユーザーに対して、本サービスの全部もしくは一部の利用を制限し、またはユーザーとしての登録を抹消することができるものとします。</p>
         <div class="indent">
             <p>１．本規約のいずれかの条項に違反した場合</p>
@@ -126,6 +131,7 @@
         </div>
         <p>２．当社は、本条に基づき当社が行った行為によりユーザーに生じた損害について、一切の責任を負いません。</p>
         <p>３．ユーザーは、本サービス内のデータ削除機能（履歴削除ボタン等）を実行した場合、当該データが完全に削除され復元できなくなることを了承するものとし、当社は当該削除によってユーザーに生じた不利益または損害について、一切の責任を負いません。</p>
+        <p>４．ユーザーは、当社所定の方法により、いつでも本サービスから退会することができます。退会にあたってのデータの取扱いは、プライバシーポリシーの定めに従います。</p>
 
         <p><strong>第8条（保証の否認および免責事項）</strong></p>
         <p>１．当社は、本サービスに事実上または法律上の瑕疵（安全性、信頼性、正確性、完全性、有効性、特定の目的への適合性、セキュリティなどに関する欠陥、エラーやバグ、権利侵害などを含みます。）がないことを明示的にも黙示的にも保証しておりません。</p>
@@ -136,10 +142,13 @@
         <p>６．当社は、本サービスにおけるAIの回答の正確性、妥当性、および特定の目的に対する適合性について保証しません。ユーザーは、AIが生成する回答には誤りや不正確な記述が含まれる可能性があることを理解した上で、自己の責任において利用するものとします。</p>
         <p>７．当社は、本サービスの利用による減量、体重管理、健康状態の改善、または特定の成果（フィットネス目標の達成等）について、明示的にも黙示的にも何ら保証するものではありません。</p>
 
-        <p><strong>第9条（サービス内容の変更等）</strong></p>
+        <p><strong>第9条（入力データおよびAI生成物の取扱い）</strong></p>
+        <p>ユーザーが本サービスに送信した食事画像、対話内容その他の入力データ、およびAIが生成したアドバイスの取扱いについては、当社プライバシーポリシーの定めるところによります。</p>
+
+        <p><strong>第10条（サービス内容の変更等）</strong></p>
         <p>当社は、ユーザーへの事前の告知をもって、本サービスの内容を変更、追加または廃止することがあり、ユーザーはこれを承諾するものとします。</p>
 
-        <p><strong>第10条（利用規約の変更）</strong></p>
+        <p><strong>第11条（利用規約の変更）</strong></p>
         <p>１．当社は以下の場合には、ユーザーの個別の同意を要せず、本規約を変更することができるものとします。</p>
         <div class="indent">
             <p>１．本規約の変更がユーザーの一般の利益に適合するとき。</p>
@@ -147,20 +156,21 @@
         </div>
         <p>２．当社はユーザーに対し、前項による本規約の変更にあたり、事前に、本規約を変更する旨及び変更後の本規約の内容並びにその効力発生時期を通知します。</p>
 
-        <p><strong>第11条（個人情報の取扱い）</strong></p>
-        <p>ユーザーは、本サービスが外部サービス（Googleヘルスコネクト等）から取得する健康データおよびユーザーが提供する食事画像等が、AIによる解析およびアドバイスの生成に利用されることに同意するものとします。</p>
+        <p><strong>第12条（個人情報の取扱い）</strong></p>
+        <p>ユーザーは、本サービスが外部サービス（Googleヘルスコネクト等）から取得する健康データおよびユーザーが提供する食事画像等が、AIによる解析およびアドバイスの生成に利用されることに同意するものとします。個人情報の具体的な取扱いについては、当社プライバシーポリシーの定めるところによります。</p>
 
-        <p><strong>第12条（通知または連絡）</strong></p>
+        <p><strong>第13条（通知または連絡）</strong></p>
         <p>ユーザーと当社との間の通知または連絡は、当社の定める方法によって行うものとします。当社は、ユーザーから、当社が別途定める方式に従った変更届け出がない限り、現在登録されている連絡先が有効なものとみなして当該連絡先へ通知または連絡を行い、これらは、発信時にユーザーへ到達したものとみなします。</p>
 
-        <p><strong>第13条（権利義務の譲渡の禁止）</strong></p>
+        <p><strong>第14条（権利義務の譲渡の禁止）</strong></p>
         <p>ユーザーは、当社の書面による事前の承諾なく、利用契約上の地位または本規約に基づく権利もしくは義務を第三者に譲渡し、または担保に供することはできません。</p>
 
-        <p><strong>第14条（準拠法・裁判管轄）</strong></p>
+        <p><strong>第15条（準拠法・裁判管轄）</strong></p>
         <p>１．本規約の解釈にあたっては、日本法を準拠法とします。</p>
         <p>２．本サービスに関して紛争が生じた場合には、当社の本店所在地を管轄する裁判所を専属的合意管轄とします。</p>
 
         <p>以上</p>
+
     </div>
 
     <!-- =============== 英語コンテンツ =============== -->
@@ -173,6 +183,7 @@
         <p>2. In addition to these Terms, the Company may establish various rules and stipulations regarding the Service (hereinafter referred to as "Individual Regulations"). Regardless of their name, these Individual Regulations shall constitute a part of these Terms.</p>
         <p>3. If the provisions of these Terms conflict with the provisions of the Individual Regulations mentioned in the preceding paragraph, the provisions of the Individual Regulations shall prevail unless otherwise specified.</p>
         <p>4. [NOTICE: Non-Medical Use Only] The Service provides advice via AI for fitness and wellness purposes only, and is not a substitute for diagnosis or treatment by a medical doctor. If you have any health concerns, please be sure to consult a specialized medical institution.</p>
+        <p>5. [Minimum Age of Use] The Service may not be used by individuals under the age of 13. Individuals aged 13 or older but under 18 may use the Service only with the consent of a parent or other legal representative. If a User aged 13 or older but under 18 uses the Service, that User shall be deemed to have obtained such consent.<span class="note">[To confirm] Ensure this age standard is consistent with the content rating declared for this app on the App Store/Google Play, particularly Google Play's "Target Age" declaration.</span></p>
 
         <p><strong>Article 2 (User Registration)</strong></p>
         <p>1. Registration for the Service shall be completed when a prospective user applies for registration in a manner determined by the Company after agreeing to these Terms, and the Company approves the application.</p>
@@ -189,8 +200,9 @@
         <p>3. The Company shall not be liable for any damages resulting from the use of a User ID and password by a third party, except in cases of intentional misconduct or gross negligence by the Company.</p>
 
         <p><strong>Article 4 (Usage Fees and Payment Methods)</strong></p>
-        <p>1. The User shall pay the usage fees separately determined by the Company and displayed on this website for the paid portions of the Service, by the method designated by the Company.</p>
-        <p>2. If the User delays payment of the usage fees, the User shall pay a late fee at a rate of 14.6% per annum.</p>
+        <p>1. Paid portions of the Service are offered solely through the billing system (in-app purchases) of Google Play, provided by Google LLC. The Company does not process payments through its own payment methods, such as direct credit card billing.</p>
+        <p>2. The amount of usage fees, payment method, billing timing, automatic renewal, cancellation procedures, and refunds shall be governed by the terms and disclosures of Google Play, and the User shall use the paid portions of the Service only after agreeing to those terms.</p>
+        <p>3. Because the Service does not use an independent payment method that would constitute mail-order sales under the Act on Specified Commercial Transactions, no notice under that Act is provided.<span class="note">[To confirm] If an independent payment method (e.g., direct credit card billing via a website) is added in the future, a separate notice page under the Act on Specified Commercial Transactions will need to be prepared at that time.</span></p>
 
         <p><strong>Article 5 (Prohibited Acts)</strong></p>
         <p>In using the Service, the User shall not engage in the following acts:</p>
@@ -207,10 +219,9 @@
             <p>10. Acts that cause disadvantage, damage, or discomfort to other Users of the Service or other third parties.</p>
             <p>11. Acts of impersonating other Users.</p>
             <p>12. Advertising, promotional, solicitation, or business activities on the Service that are not authorized by the Company.</p>
-            <p>13. Acts aimed at meeting unacquainted persons of the opposite sex.</p>
-            <p>14. Acts of directly or indirectly providing benefits to antisocial forces in connection with the Company's services.</p>
-            <p>15. Acts that abuse AI or place a heavy load on the system.</p>
-            <p>16. Other acts that the Company deems inappropriate.</p>
+            <p>13. Acts of directly or indirectly providing benefits to antisocial forces in connection with the Company's services.</p>
+            <p>14. Acts that abuse AI or place a heavy load on the system, including inducing the AI, through improper instructions, to deviate from its intended scope of response.</p>
+            <p>15. Other acts that the Company deems inappropriate.</p>
         </div>
 
         <p><strong>Article 6 (Suspension of Service, etc.)</strong></p>
@@ -223,7 +234,7 @@
         </div>
         <p>2. The Company shall not be liable for any disadvantage or damage suffered by the User or a third party due to the suspension or interruption of the provision of the Service.</p>
 
-        <p><strong>Article 7 (Restriction of Use and Cancellation of Registration)</strong></p>
+        <p><strong>Article 7 (Restriction of Use, Cancellation of Registration, and Withdrawal)</strong></p>
         <p>1. The Company may restrict the User from using all or part of the Service or cancel the User's registration without prior notice if the User falls under any of the following:</p>
         <div class="indent">
             <p>1. Violates any provision of these Terms.</p>
@@ -235,6 +246,7 @@
         </div>
         <p>2. The Company shall not be liable for any damage caused to the User by actions taken by the Company based on this Article.</p>
         <p>3. The User acknowledges that if they execute the data deletion function (e.g., the history deletion button) within the Service, the relevant data will be completely deleted and cannot be restored. The Company shall not be liable for any disadvantage or damage incurred by the User due to such deletion.</p>
+        <p>4. The User may withdraw from the Service at any time in a manner designated by the Company. The handling of data upon withdrawal shall be governed by the Privacy Policy.</p>
 
         <p><strong>Article 8 (Disclaimer of Warranty and Exemption of Liability)</strong></p>
         <p>1. THE SERVICE IS PROVIDED ON AN "AS IS" AND "AS AVAILABLE" BASIS, "WITH ALL FAULTS." TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, THE COMPANY EXPRESSLY DISCLAIMS ALL WARRANTIES OF ANY KIND, WHETHER EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, SAFETY, RELIABILITY, ACCURACY, COMPLETENESS, EFFECTIVENESS, SECURITY, AND NON-INFRINGEMENT. THE COMPANY DOES NOT WARRANT THAT THE SERVICE WILL BE UNINTERRUPTED, TIMELY, SECURE, OR ERROR-FREE.</p>
@@ -244,11 +256,14 @@
         <p>5. The Service is not a medical institution, and the advice provided is limited to general information for health promotion. The User shall use the Service at their own risk. The Company shall not be liable for any changes in physical condition, damages, etc. resulting from following the advice of the Service (except as otherwise provided in Paragraphs 2 and 3 of this Article).</p>
         <p>6. The Company does not guarantee the accuracy, adequacy, or fitness for a particular purpose of the AI's responses in the Service. The User shall use the Service at their own risk, understanding that the responses generated by the AI may contain errors or inaccuracies.</p>
         <p>7. The Company does not guarantee, either expressly or impliedly, any specific outcomes or results from the use of the Service, including but not limited to weight loss, weight management, health improvement, or the achievement of fitness goals.</p>
-        
-        <p><strong>Article 9 (Changes to Service Content, etc.)</strong></p>
+
+        <p><strong>Article 9 (Handling of Input Data and AI-Generated Output)</strong></p>
+        <p>The handling of meal images, chat content, and other input data submitted by the User to the Service, and of advice generated by AI, shall be governed by the Company's Privacy Policy.</p>
+
+        <p><strong>Article 10 (Changes to Service Content, etc.)</strong></p>
         <p>The Company may change, add to, or abolish the contents of the Service with prior notice to the User, and the User shall consent to this.</p>
 
-        <p><strong>Article 10 (Changes to Terms of Use)</strong></p>
+        <p><strong>Article 11 (Changes to Terms of Use)</strong></p>
         <p>1. The Company may change these Terms without the individual consent of the User in the following cases:</p>
         <div class="indent">
             <p>1. When the modification of these Terms conforms to the general interests of the Users.</p>
@@ -256,20 +271,21 @@
         </div>
         <p>2. When modifying these Terms pursuant to the preceding paragraph, the Company shall notify the User in advance of the intention to modify the Terms, the contents of the modified Terms, and the effective date.</p>
 
-        <p><strong>Article 11 (Handling of Personal Information)</strong></p>
-        <p>The User agrees that health data acquired by the Service from external services (e.g., Google Health Connect) and meal images provided by the User will be used for AI analysis and the generation of advice.</p>
+        <p><strong>Article 12 (Handling of Personal Information)</strong></p>
+        <p>The User agrees that health data acquired by the Service from external services (e.g., Google Health Connect) and meal images provided by the User will be used for AI analysis and the generation of advice. The specific handling of personal information shall be governed by the Company's Privacy Policy.</p>
 
-        <p><strong>Article 12 (Notices or Communications)</strong></p>
+        <p><strong>Article 13 (Notices or Communications)</strong></p>
         <p>Notices or communications between the User and the Company shall be made in a manner determined by the Company. Unless the User submits a change notification in a manner separately determined by the Company, the Company will consider the currently registered contact information as valid and will send notices or communications to that contact, which shall be deemed to have reached the User at the time of transmission.</p>
 
-        <p><strong>Article 13 (Prohibition of Assignment of Rights and Obligations)</strong></p>
+        <p><strong>Article 14 (Prohibition of Assignment of Rights and Obligations)</strong></p>
         <p>The User may not assign their position under the use contract or their rights or obligations based on these Terms to a third party or offer them as collateral without the prior written consent of the Company.</p>
 
-        <p><strong>Article 14 (Governing Law and Jurisdiction)</strong></p>
+        <p><strong>Article 15 (Governing Law and Jurisdiction)</strong></p>
         <p>1. The interpretation of these Terms shall be governed by the laws of Japan.</p>
         <p>2. In the event of a dispute regarding the Service, the court having jurisdiction over the location of the Company's head office shall have exclusive agreed jurisdiction.</p>
 
         <p>End</p>
+
     </div>
 
     <!-- 切り替え用JavaScript -->
