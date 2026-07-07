@@ -17,7 +17,6 @@
             border-bottom: 2px solid #ccc; 
             padding-bottom: 10px;
         }
-        /* ボタンのスタイリング */
         .tab-container {
             margin-bottom: 20px;
             display: flex;
@@ -33,17 +32,22 @@
             border-radius: 5px;
             transition: all 0.3s;
         }
-        /* 選択されているボタンのスタイル */
         .tab-button.active {
             background-color: #007bff;
             color: #fff;
         }
-        /* 初期状態では英語を非表示にする */
         #en-content {
             display: none;
         }
         p { margin-bottom: 10px; }
         .indent { padding-left: 1.5em; }
+        .note {
+            background-color: #fff8e1;
+            border-left: 4px solid #ffc107;
+            padding: 10px 15px;
+            margin: 15px 0;
+            font-size: 0.9em;
+        }
     </style>
 </head>
 <body>
@@ -61,7 +65,8 @@
         <p>「個人情報」とは、個人情報保護法にいう「個人情報」を指すものとし、生存する個人に関する情報であって、当該情報に含まれるGoogleユーザーID、ヘルスケアデータ（歩数、カロリー等）、対話データ（チャット履歴や送信された写真）、その他の記述等により特定の個人を識別できる情報及び容貌、指紋、声紋にかかるデータなどの当該情報単体から特定の個人を識別できる情報（個人識別情報）を指します。</p>
 
         <p><strong>第2条（個人情報の収集方法）</strong></p>
-        <p>当社は、ユーザーが利用する際にユーザーID（メールアドレス等）、Googleヘルスコネクトのデータ（歩数、心拍数、カロリー等）、チャット履歴や食事画像の個人情報をお尋ねすることがあります。また、ユーザーと提携先などとの間でなされたユーザーの個人情報を含む取引記録や決済に関する情報を、当社の提携先（情報提供元、広告主、広告配信先などを含みます。以下、「提携先」といいます。）などから収集することがあります。</p>
+        <p>１．当社は、ユーザーが利用する際にユーザーID（メールアドレス等）、Googleヘルスコネクトのデータ（歩数、心拍数、カロリー等）、チャット履歴や食事画像の個人情報をお尋ねすることがあります。また、ユーザーと提携先などとの間でなされたユーザーの個人情報を含む取引記録や決済に関する情報を、当社の提携先（情報提供元、広告主、広告配信先などを含みます。以下、「提携先」といいます。）などから収集することがあります。</p>
+        <p>２．前項の情報のうち、ユーザーが入力する対話内容または送信する画像等に、病歴その他の要配慮個人情報（個人情報保護法にいう「要配慮個人情報」をいいます。）に該当する情報が含まれる場合、当社は、法令に定める場合を除き、あらかじめユーザーの同意を得た上でこれを取得するものとします。ユーザーが当該情報を本サービスに入力する行為をもって、当社は本項の同意を得たものとみなします。</p>
 
         <p><strong>第3条（個人情報を収集・利用する目的）</strong></p>
         <p>当社が個人情報を収集・利用する目的は、以下のとおりです。</p>
@@ -79,17 +84,46 @@
         </div>
 
         <p><strong>第4条（情報の外部送信）</strong></p>
-        <p>本サービスは、AIによるアドバイス生成のため、ユーザーが入力した対話データおよび画像データを、Google LLCが提供するGemini APIに送信します。送信されたデータはアドバイス生成の目的のみに使用され、本ポリシーに従って取り扱われます。</p>
+        <p>１．本サービスは、AIによるアドバイス生成のため、ユーザーが入力した対話データおよび画像データを、Google LLCが提供するGemini APIに送信します。送信されたデータはアドバイス生成の目的のみに使用され、本ポリシーに従って取り扱われます。</p>
+        <p>２．当社は、本サービス内における広告の配信のため、Google LLCが提供する広告配信サービス「Google AdMob」を利用しています。Google AdMobは、本サービスの利用時に、ユーザーの端末に記録された広告識別子（Advertising ID）、IPアドレス、端末情報（OS、機種等）およびアプリの利用状況等の情報を、Google LLCのサーバーへ自動的に送信します。送信された情報は、Google LLCにおいて、広告の配信、広告のパーソナライズおよび効果測定の目的で利用されます。なお、第6条に定めるとおり、Googleヘルスコネクトから取得した歩数、心拍数等の健康データは、広告の配信には一切使用しません。</p>
+        <p>３．Google AdMobにおける情報の取扱いの詳細は、Google社のプライバシーポリシー（https://policies.google.com/privacy）をご確認ください。ユーザーは、ご利用の端末の設定またはGoogleの広告設定（https://adssettings.google.com/）から、広告のパーソナライズを無効にすることができます。</p>
 
-        <p><strong>第5条（ヘルスコネクトデータの取り扱い）</strong></p>
+        <p><strong>第5条（外国にある第三者への提供）</strong></p>
+        <p>１．当社は、第4条に基づき、ユーザーの対話データおよび画像データを米国に所在するGoogle LLCに送信します。当該送信は、当社がアドバイス生成という利用目的の達成に必要な範囲内でGoogle LLCに取扱いを委託するものであり、個人情報保護法にいう第三者提供には該当しませんが、データの移転先が外国にある事業者であることを踏まえ、当社は以下の情報を本ポリキー上で提供します。</p>
+        <div class="indent">
+            <p>１．移転先の国：アメリカ合衆国</p>
+            <p>２．当該国における個人情報保護制度の有無および内容：Google LLCは、Google社が定めるプライバシーおよびセキュリティに関する基準・認証（ISO/IEC 27001等）に従い、適切な安全管理措置を講じています。</p>
+            <p>３．Google LLCが講じる個人情報の保護のための措置：契約上の守秘義務、データ暗号化、アクセス制御等</p>
+        </div>
+        <p>２．ユーザーは、当社に対し、前項の移転に関する詳細情報の提供を求めることができます。</p>
+
+        <p><strong>第6条（ヘルスコネクトデータの取り扱い）</strong></p>
         <p>本サービスがGoogleヘルスコネクトから取得した情報の使用は、ヘルスコネクトの許可される使用に関するポリシー（限定的利用要件を含む）に従います。取得したデータは、AIキャラクターによるアドバイス生成およびユーザーへの表示のみに使用し、広告配信や第三者への販売には一切利用しません。</p>
 
-        <p><strong>第6条（利用目的の変更）</strong></p>
+        <p><strong>第7条（アップロードデータおよびAI生成物の取扱い）</strong></p>
+        <p>１．ユーザーが本サービスに送信した食事画像、対話内容その他の入力データ（以下、「入力データ」といいます。）は、専らユーザー本人に対するアドバイス生成および表示の目的にのみ使用します。</p>
+        <p>２．当社は、入力データの送信にあたり、Cloud請求先アカウントを有効化した有料サービスとしてGoogle LLCのGemini APIを利用しています。Google LLCの定める「Gemini API追加利用規約」に基づき、有料サービスとして送信された入力データおよびAIの回答は、同社の製品改善（機械学習モデルの学習を含みます。）の目的には使用されません。</p>
+        <p>３．前項にかかわらず、Google LLCは、不正利用の検知・防止および法令上必要な開示への対応を目的として、入力データおよび回答を一定期間記録することがあります。</p>
+        <p>４．本サービスの利用にあたりユーザーが使用するGoogleアカウントに関する情報（アカウント情報、お支払い履歴、IPアドレス等の技術的情報を含みます。）の取扱いについては、前3項とは別に、Google LLCの定める通常のプライバシーポリシーが適用されます。</p>
+        <p>５．AIが生成したアドバイス（以下、「AI生成物」といいます。）は、ユーザーが本サービスの利用範囲内で自由に閲覧・保存できるものとし、当社は、統計的に加工し個人を特定できない形式に限り、サービス改善のために利用することがあります。</p>
+
+        <p><strong>第8条（個人情報の保存期間および退会時の取扱い）</strong></p>
+        <p>１．当社は、第3条に定める利用目的の達成に必要な期間に限り個人情報を保存し、当該期間の経過後、または保存の必要がなくなった場合には、遅滞なく消去します。</p>
+        <p>２．ユーザーが本サービスから退会した場合、当社は、法令上保存が義務付けられる場合を除き、合理的な期間内に当該ユーザーの個人情報を消去します。</p>
+
+        <p><strong>第9条（未成年者の個人情報）</strong></p>
+        <p>１．本サービスは、満13歳未満の方はご利用いただけません。当社は、満13歳未満の方から個人情報を取得しません。</p>
+        <p>２．満13歳以上満18歳未満のユーザーから個人情報を取得する場合、当社は、親権者その他の法定代理人の同意を得た上でこれを取得するものとします。ユーザーが本サービスに個人情報を入力する行為をもって、当社は当該同意を得ているものとみなします。</p>
+
+        <p><strong>第10条（安全管理措置）</strong></p>
+        <p>当社は、取り扱う個人情報の漏えい、滅失またはき損の防止その他個人情報の安全管理のため、アクセス制御、通信の暗号化その他必要かつ適切な措置を講じます。</p>
+
+        <p><strong>第11条（利用目的の変更）</strong></p>
         <p>１．当社は、利用目的が変更前と関連性を有すると合理的に認められる場合に限り、個人情報の利用目的を変更するものとします。</p>
         <p>２．利用目的の変更を行った場合には、変更後の目的について、当社所定の方法により、ユーザーに通知し、または本ウェブサイト上に公表するものとします。</p>
 
-        <p><strong>第7条（個人情報の第三者提供）</strong></p>
-        <p>１．当社は、次に掲げる場合を除いて、あらかじめユーザーの同意を得ることなく、第三者に個人情報を提供することはありません。ただし、個人情報保護法その他の法令で認められる場合を除きます（第4条に基づくGemini APIへの送信、およびクラウドサービスへのデータ保存・解析委託を除く）。</p>
+        <p><strong>第12条（個人情報の第三者提供）</strong></p>
+        <p>１．当社は、次に掲げる場合を除いて、あらかじめユーザーの同意を得ることなく、第三者に個人情報を提供することはありません。ただし、個人情報保護法その他の法令で認められる場合を除きます（第4条および第5条に基づくGoogle LLCへの送信、およびクラウドサービスへのデータ保存・解析委託を除く）。</p>
         <div class="indent">
             <p>１．人の生命、身体または財産の保護のために必要がある場合であって、本人の同意を得ることが困難であるとき</p>
             <p>２．公衆衛生の向上または児童の健全な育成の推進のために特に必要がある場合であって、本人の同意を得ることが困難であるとき</p>
@@ -110,7 +144,7 @@
             <p>３．個人情報を特定の者との間で共同して利用する場合であって、その旨並びに共同して利用される個人情報の項目、共同して利用する者の範囲、利用する者の利用目的および当該個人情報の管理について責任を有する者の氏名または名称について、あらかじめ本人に通知し、または本人が容易に知り得る状態に置いた場合</p>
         </div>
 
-        <p><strong>第8条（個人情報の開示）</strong></p>
+        <p><strong>第13条（個人情報の開示）</strong></p>
         <p>１．当社は、本人から個人情報の開示を求められたときは、本人に対し、遅滞なくこれを開示します。ただし、開示することにより次のいずれかに該当する場合は、その全部または一部を開示しないこともあり、開示しない決定をした場合には、その旨を遅滞なく通知します。なお、個人情報の開示に際しては、1件あたり1,000円の手数料を申し受けます。</p>
         <div class="indent">
             <p>１．本人または第三者の生命、身体、財産その他の権利利益を害するおそれがある場合</p>
@@ -119,27 +153,28 @@
         </div>
         <p>２．前項の定めにかかわらず、履歴情報および特性情報などの個人情報以外の情報については、原則として開示いたしません。</p>
 
-        <p><strong>第9条（個人情報の訂正および削除）</strong></p>
+        <p><strong>第14条（個人情報の訂正および削除）</strong></p>
         <p>１．ユーザーは、当社の保有する自己の個人情報が誤った情報である場合には、当社が定める手続きにより、当社に対して個人情報の訂正、追加または削除（以下、「訂正等」といいます。）を請求することができます。</p>
         <p>２．当社は、ユーザーから前項の請求を受けてその請求に応じる必要があると判断した場合には、遅滞なく、当該個人情報の訂正等を行うものとします。</p>
         <p>３．当社は、前項の規定に基づき訂正等を行った場合、または訂正等を行わない旨の決定をしたときは遅滞なく、これをユーザーに通知します。</p>
 
-        <p><strong>第10条（個人情報の利用停止等）</strong></p>
+        <p><strong>第15条（個人情報の利用停止等）</strong></p>
         <p>１．当社は、本人から、個人情報が、利用目的の範囲を超えて取り扱われているという理由、または不正の手段により取得されたものであるという理由により、その利用の停止または消去（以下、「利用停止等」といいます。）を求められた場合には、遅滞なく必要な調査を行います。</p>
         <p>２．前項の調査結果に基づき、その請求に応じる必要があると判断した場合には、遅滞なく、当該個人情報の利用停止等を行います。</p>
         <p>３．当社は、前項の規定に基づき利用停止等を行った場合、または利用停止等を行わない旨の決定をしたときは、遅滞なく、これをユーザーに通知します。</p>
         <p>４．前2項にかかわらず、利用停止等に多額の費用を有する場合その他利用停止等を行うことが困難な場合であって、ユーザーの権利利益を保護するために必要なこれに代わるべき措置をとれる場合は、この代替策を講じるものとします。</p>
 
-        <p><strong>第11条（プライバシーポリシーの変更）</strong></p>
+        <p><strong>第16条（プライバシーポリシーの変更）</strong></p>
         <p>１．本ポリシーの内容は、法令その他本ポリシーに別段の定めのある事項を除いて、ユーザーに通知することなく、変更することができるものとします。</p>
         <p>２．当社が別途定める場合を除いて，変更後のプライバシーポリシーは、本ウェブサイトに掲載したときから効力を生じるものとします。</p>
 
-        <p><strong>第12条（お問い合わせ窓口）</strong></p>
+        <p><strong>第17条（お問い合わせ窓口）</strong></p>
         <p>本ポリシーに関するお問い合わせは、下記の窓口までお願いいたします。</p>
         <p>住所：〒321-4364 栃木県鹿沼市幸町1-3-27<br>
         事業者名（屋号）：MogMogFit<br>
         代表者（事業者）：Yuki Shibahara<br>
         Eメールアドレス：mogmogfit.studio@gmail.com</p>
+
     </div>
 
     <div id="en-content">
@@ -150,7 +185,8 @@
         <p>"Personal Information" shall refer to "personal information" as defined in the Personal Information Protection Act of Japan, and means information regarding a living individual that can identify a specific individual by Google User ID, healthcare data (steps, calories, etc.), interaction data (chat history and transmitted photos), or other descriptions contained in such information, as well as information that can identify a specific individual from such information alone, such as data concerning physical appearance, fingerprints, or voiceprints (personal identification information).</p>
 
         <p><strong>Article 2 (How We Collect Personal Information)</strong></p>
-        <p>The Company may ask for personal information such as User ID (email address, etc.), Google Health Connect data (steps, heart rate, calories, etc.), chat history, and meal images when users use the Service. In addition, the Company may collect transaction records and information related to payments, including the user's personal information made between the user and partners, from the Company's partners (including information providers, advertisers, and ad distribution destinations; hereinafter referred to as "Partners").</p>
+        <p>1. The Company may ask for personal information such as User ID (email address, etc.), Google Health Connect data (steps, heart rate, calories, etc.), chat history, and meal images when users use the Service. In addition, the Company may collect transaction records and information related to payments, including the user's personal information made between the user and partners, from the Company's partners (including information providers, advertisers, and ad distribution destinations; hereinafter referred to as "Partners").</p>
+        <p>2. Where information described in the preceding paragraph, entered by the User in chat content or transmitted images, includes medical history or other special care-required personal information (as defined under the Personal Information Protection Act), the Company shall obtain the User's prior consent before acquiring such information, except as otherwise permitted by law. By inputting such information into the Service, the User is deemed to have given the consent referred to in this paragraph.</p>
 
         <p><strong>Article 3 (Purpose of Collecting and Using Personal Information)</strong></p>
         <p>The purposes for which the Company collects and uses personal information are as follows:</p>
@@ -168,17 +204,46 @@
         </div>
 
         <p><strong>Article 4 (External Transmission of Information)</strong></p>
-        <p>In order to generate advice via AI, the Service transmits interaction data and image data entered by the user to the Gemini API provided by Google LLC. The transmitted data will be used solely for the purpose of generating advice and will be handled in accordance with this Policy.</p>
+        <p>1. In order to generate advice via AI, the Service transmits interaction data and image data entered by the user to the Gemini API provided by Google LLC. The transmitted data will be used solely for the purpose of generating advice and will be handled in accordance with this Policy.</p>
+        <p>2. The Company uses "Google AdMob," an advertising service provided by Google LLC, to deliver advertisements within the Service. Google AdMob automatically transmits information recorded on the User's device—such as the advertising identifier (Advertising ID), IP address, device information (OS, model, etc.), and app usage data—to Google LLC's servers when the Service is used. The transmitted information is used by Google LLC for the purposes of ad delivery, ad personalization, and measuring advertising effectiveness. As provided in Article 6, health data obtained from Google Health Connect, such as steps and heart rate, is never used for ad delivery.</p>
+        <p>3. For details on how Google AdMob handles information, please refer to Google's Privacy Policy (https://policies.google.com/privacy). Users may disable ad personalization through their device settings or through Google's Ad Settings (https://adssettings.google.com/).</p>
 
-        <p><strong>Article 5 (Handling of Health Connect Data)</strong></p>
+        <p><strong>Article 5 (Provision to Third Parties Located in Foreign Countries)</strong></p>
+        <p>1. Pursuant to Article 4, the Company transmits the User's interaction data and image data to Google LLC, located in the United States. This transmission is an entrustment to Google LLC within the scope necessary to achieve the purpose of generating advice, and does not constitute "provision to a third party" under the Personal Information Protection Act; however, in light of the fact that the transfer destination is a business operator located in a foreign country, the Company provides the following information in this Policy:</p>
+        <div class="indent">
+            <p>1. Destination country: United States of America</p>
+            <p>2. Existence and content of the personal information protection system in that country: Google LLC maintains appropriate security management measures in accordance with Google's privacy and security standards and certifications (such as ISO/IEC 27001).</p>
+            <p>3. Measures taken by Google LLC to protect personal information: contractual confidentiality obligations, data encryption, access controls, etc.</p>
+        </div>
+        <p>2. The User may request the Company to provide further details regarding the transfer described in the preceding paragraph.</p>
+
+        <p><strong>Article 6 (Handling of Health Connect Data)</strong></p>
         <p>The Service's use of information received from Google Health Connect will adhere to the Health Connect Permissions policy, including the Limited Use requirements. The acquired data will be used solely for generating advice by AI characters and displaying it to users, and will never be used for advertising distribution or sold to third parties.</p>
 
-        <p><strong>Article 6 (Changes to the Purpose of Use)</strong></p>
+        <p><strong>Article 7 (Handling of Uploaded Data and AI-Generated Output)</strong></p>
+        <p>1. Meal images, chat content, and other input data submitted by the User to the Service (hereinafter "Input Data") shall be used solely for the purpose of generating and displaying advice to that User.</p>
+        <p>2. In transmitting Input Data, the Company uses the Gemini API provided by Google LLC as a Paid Service, with a Cloud billing account enabled. Pursuant to Google LLC's Gemini API Additional Terms of Service, Input Data and AI responses transmitted as part of the Paid Service are not used for the purpose of improving Google's products, including training its machine learning models.</p>
+        <p>3. Notwithstanding the preceding paragraph, Google LLC may log Input Data and responses for a limited period for the purpose of detecting and preventing misuse and responding to disclosures required by law or regulation.</p>
+        <p>4. The handling of information related to the Google Account used by the User in connection with the Service (including account information, payment history, and technical information such as IP addresses) is separately governed by Google LLC's standard Privacy Policy, apart from the preceding three paragraphs.</p>
+        <p>5. Advice generated by AI (hereinafter "AI Output") may be freely viewed and saved by the User within the scope of using the Service. The Company may use AI Output for service improvement only in a statistically processed form that does not identify any individual.</p>
+
+        <p><strong>Article 8 (Retention Period of Personal Information and Handling upon Withdrawal)</strong></p>
+        <p>1. The Company shall retain personal information only for the period necessary to achieve the purposes of use set forth in Article 3, and shall delete it without delay after that period elapses or when retention is no longer necessary.</p>
+        <p>2. When a User withdraws from the Service, the Company shall delete that User's personal information within a reasonable period, except where retention is required by law.</p>
+
+        <p><strong>Article 9 (Personal Information of Minors)</strong></p>
+        <p>1. The Service may not be used by individuals under the age of 13. The Company does not knowingly collect personal information from individuals under the age of 13.</p>
+        <p>2. Where the Company acquires personal information from a User who is 13 years of age or older but under 18 years of age, it shall do so with the consent of a parent or other legal representative. By inputting personal information into the Service, the User is deemed to have obtained such consent.</p>
+
+        <p><strong>Article 10 (Security Control Measures)</strong></p>
+        <p>The Company shall implement access controls, encryption of communications, and other necessary and appropriate measures to prevent the leakage, loss, or damage of personal information handled by the Company and to otherwise ensure the security of such information.</p>
+
+        <p><strong>Article 11 (Changes to the Purpose of Use)</strong></p>
         <p>1. The Company shall change the purpose of use of personal information only when it is reasonably recognized that the purpose of use after the change is relevant to that before the change.</p>
         <p>2. In the event of a change to the purpose of use, the changed purpose shall be notified to the user or announced on this website in a manner prescribed by the Company.</p>
 
-        <p><strong>Article 7 (Third-Party Provision of Personal Information)</strong></p>
-        <p>1. The Company will not provide personal information to a third party without obtaining the prior consent of the user, except in the following cases, or unless permitted by the Personal Information Protection Act or other laws and regulations (excluding data transmission to Gemini API based on Article 4 and data storage/analysis entrustment to cloud services such as Google LLC).</p>
+        <p><strong>Article 12 (Third-Party Provision of Personal Information)</strong></p>
+        <p>1. The Company will not provide personal information to a third party without obtaining the prior consent of the user, except in the following cases, or unless permitted by the Personal Information Protection Act or other laws and regulations (excluding data transmission to Google LLC based on Articles 4 and 5, and data storage/analysis entrustment to cloud services).</p>
         <div class="indent">
             <p>1. When it is necessary for the protection of a person's life, body, or property, and it is difficult to obtain the consent of the individual</p>
             <p>2. When it is particularly necessary for the improvement of public health or the promotion of the sound development of children, and it is difficult to obtain the consent of the individual</p>
@@ -199,7 +264,7 @@
             <p>3. When personal information is used jointly with a specific person, and the individual is notified in advance or placed in a state where they can easily know the effect, the items of personal information jointly used, the scope of joint users, the purpose of use of the users, and the name or title of the person responsible for the management of the personal information</p>
         </div>
 
-        <p><strong>Article 8 (Disclosure of Personal Information)</strong></p>
+        <p><strong>Article 13 (Disclosure of Personal Information)</strong></p>
         <p>1. When the Company is requested by the individual to disclose personal information, the Company shall disclose it to the individual without delay. However, if disclosure falls under any of the following, all or part of it may not be disclosed, and if a decision is made not to disclose, that effect will be notified without delay. A fee of 1,000 yen per request will be charged for the disclosure of personal information.</p>
         <div class="indent">
             <p>1. When there is a risk of harming the life, body, property, or other rights and interests of the individual or a third party</p>
@@ -208,27 +273,28 @@
         </div>
         <p>2. Notwithstanding the provisions of the preceding paragraph, in principle, information other than personal information, such as history information and characteristic information, will not be disclosed.</p>
 
-        <p><strong>Article 9 (Correction and Deletion of Personal Information)</strong></p>
+        <p><strong>Article 14 (Correction and Deletion of Personal Information)</strong></p>
         <p>1. If the personal information held by the Company is incorrect, the user may request the Company to correct, add, or delete the personal information (hereinafter referred to as "Correction, etc.") in accordance with the procedures established by the Company.</p>
         <p>2. If the Company receives a request from the user mentioned in the preceding paragraph and determines that it is necessary to respond to the request, the Company shall perform Correction, etc. of the relevant personal information without delay.</p>
         <p>3. If the Company performs Correction, etc. based on the provisions of the preceding paragraph, or makes a decision not to perform Correction, etc., it shall notify the user without delay.</p>
 
-        <p><strong>Article 10 (Suspension of Use, etc. of Personal Information)</strong></p>
+        <p><strong>Article 15 (Suspension of Use, etc. of Personal Information)</strong></p>
         <p>1. If the Company is requested by the individual to suspend the use or erase personal information (hereinafter referred to as "Suspension of Use, etc.") on the grounds that it is handled beyond the scope of the purpose of use or has been acquired by improper means, the Company shall conduct the necessary investigation without delay.</p>
         <p>2. If it is determined that it is necessary to respond to the request based on the results of the investigation mentioned in the preceding paragraph, the Company shall perform Suspension of Use, etc. of the relevant personal information without delay.</p>
         <p>3. If the Company performs Suspension of Use, etc. based on the provisions of the preceding paragraph, or makes a decision not to perform Suspension of Use, etc., it shall notify the user without delay.</p>
         <p>4. Notwithstanding the preceding two paragraphs, if Suspension of Use, etc. requires a large amount of expense or is otherwise difficult to perform, and alternative measures necessary to protect the rights and interests of the user can be taken, these alternative measures shall be implemented.</p>
 
-        <p><strong>Article 11 (Changes to the Privacy Policy)</strong></p>
+        <p><strong>Article 16 (Changes to the Privacy Policy)</strong></p>
         <p>1. The contents of this Policy may be changed without notice to the user, except as otherwise provided by laws and regulations or in this Policy.</p>
         <p>2. Unless otherwise separately specified by the Company, the modified Privacy Policy shall become effective from the time it is posted on this website.</p>
 
-        <p><strong>Article 12 (Contact Information)</strong></p>
+        <p><strong>Article 17 (Contact Information)</strong></p>
         <p>For inquiries regarding this Policy, please contact the following office:</p>
         <p>Address: 1-3-27 Saiwaicho, Kanuma City, Tochigi Prefecture 321-4364<br>
         Business Name (Trade Name): MogMogFit<br>
-        Owner (Sole Proprietor):Yuki Shibahara<br>
+        Owner (Sole Proprietor): Yuki Shibahara<br>
         Email Address: mogmogfit.studio@gmail.com</p>
+
     </div>
 
     <script>
